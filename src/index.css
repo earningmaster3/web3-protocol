@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+@import "tailwindcss";
+
+/*  IMPORTING THE TAILWIND CSS  */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*  DEFINING THE CSS PROPERTIES  */
+:root {
+  --main-font: 'poppins', sans-serif;
+  --button-font: "BBH Sans Bartle", sans-serif;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+
+}
+
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Smooth scrolling for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+.button-font {
+  font-family: var(--button-font);
+}
+
+.primary-font {
+  font-family: var(--main-font);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 20px auto;
+}
+
+/* Scroll Animation Classes */
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-fade-left {
+  opacity: 0;
+  transform: translateX(-2rem);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-fade-right {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.7s ease-out;
+}
+
+/* Animation trigger class */
+.scroll-fade-up.animate-in,
+.scroll-fade-left.animate-in,
+.scroll-fade-right.animate-in,
+.scroll-scale.animate-in {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 5px auto;
+
+}

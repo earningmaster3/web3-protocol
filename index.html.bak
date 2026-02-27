@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg" href="./nbcoin.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3 Protocol — Web3 growth, AMAs, token launches</title>
+  <meta name="description"
+    content="Web3 Protocol is a protocol-native Web3 agency offering token growth, NFT strategy, AMAs, PR, exchange listings, and community marketing to help crypto projects scale." />
+  <link rel="canonical" href="/" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Web3 Protocol — Web3 growth, AMAs, token launches" />
+  <meta property="og:description"
+    content="Protocol-native Web3 growth agency: tokenomics, listings, AMAs, influencer & community marketing." />
+  <meta property="og:image" content="./nbcoin.svg" />
+  <meta property="og:url" content="/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Web3 Protocol — Web3 growth" />
+  <meta name="twitter:description"
+    content="Protocol-native Web3 growth agency: tokenomics, listings, AMAs, influencer & community marketing." />
+  <meta name="twitter:image" content="./nbcoin.svg" />
+
+  <!-- Performance / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Structured data (Organization + WebSite) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Web3 Protocol",
+          "url": "/",
+          "logo": "./nbcoin.svg",
+          "sameAs": ["https://x.com/NbCex", "https://t.me/web3_protocol"]
+        },
+        {
+          "@type": "WebSite",
+          "url": "/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
