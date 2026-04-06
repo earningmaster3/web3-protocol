@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import nbcoin from "../assets/Logo2.svg";
 import connect from "../assets/connect.svg";
@@ -34,9 +35,9 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <a href="/" aria-label="Web3 Protocol home">
+        <Link to="/" aria-label="Web3 Protocol home" className="inline-flex">
           <img src={nbcoin} alt="Web3 Protocol logo" className="w-52 cursor-pointer" />
-        </a>
+        </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex items-center gap-6 text-gray-200 font-thin">
@@ -49,15 +50,25 @@ const Navbar = () => {
             { name: "FAQs", href: "#faq" },
             { name: "Blog", href: "/blog" },
           ].map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target={link.href && link.href.startsWith('http') ? '_blank' : '_self'}
-              rel="noopener noreferrer"
-              className="hover:text-white hover:scale-110 transition-transform duration-300"
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="hover:text-white hover:scale-110 transition-transform duration-300"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                target={link.href && link.href.startsWith('http') ? '_blank' : '_self'}
+                rel="noopener noreferrer"
+                className="hover:text-white hover:scale-110 transition-transform duration-300"
+              >
+                {link.name}
+              </a>
+            )
           ))}
         </div>
 
@@ -110,15 +121,25 @@ const Navbar = () => {
           { name: "FAQs", href: "#faq" },
           { name: "Blog", href: "/blog" },
         ].map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            target={link.href && link.href.startsWith('http') ? '_blank' : '_self'}
-            rel="noopener noreferrer"
-            className="hover:text-white hover:scale-105 transition-transform duration-300"
-          >
-            {link.name}
-          </a>
+          link.href.startsWith('/') ? (
+            <Link
+              key={link.name}
+              to={link.href}
+              className="hover:text-white hover:scale-105 transition-transform duration-300"
+            >
+              {link.name}
+            </Link>
+          ) : (
+            <a
+              key={link.name}
+              href={link.href}
+              target={link.href && link.href.startsWith('http') ? '_blank' : '_self'}
+              rel="noopener noreferrer"
+              className="hover:text-white hover:scale-105 transition-transform duration-300"
+            >
+              {link.name}
+            </a>
+          )
         ))}
 
         {/* Language (mobile) */}
