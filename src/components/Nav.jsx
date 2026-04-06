@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import nbcoin from "../assets/logo2.svg";
+import nbcoin from "../assets/Logo2.svg";
 import connect from "../assets/connect.svg";
 import { useEffect } from "react";
 const Navbar = () => {
